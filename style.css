@@ -1,0 +1,285 @@
+/*  Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Castoro&family=Orbitron:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Styling for all section*/
+section {
+  padding: 100px 0;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+.about, .favorite {
+  font-family: 'Castoro', serif;
+}
+
+.about .about-section, .css .css-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+section .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #008BEC;
+  transform: translateX(-50%);
+}
+
+section .title::after {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  font-size: 20px;
+  color: #008BEC;
+  padding: 0 5px;
+  transform: translateX(-50%);
+}
+
+/* Styling Navigation Bar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 30px 0;
+  font-family: 'Orbitron', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: #008BEC;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  display: block;
+  color: #008BEC;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: black;
+}
+
+/* Menu button */
+.menuBtn {
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Styling Home Section */
+.home {
+  display: flex;
+  background: url("https://i.gifer.com/EPJD.gif") no-repeat center;
+  height: 100vh;
+  color: black;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.text-2 {
+  font-size: 27px;
+}
+
+.text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+/* Styling About Section */
+.about .about-section .left {
+  width: 45%;
+}
+
+.about .about-section .left img {
+  height: 550px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.about .about-section .right {
+  width: 55%;
+}
+
+.about .about-section .right .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Styling Favorite Section */
+.css .css-section .left {
+  width: 45%;
+}
+
+.css .css-section .left img {
+  height: 500px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.css .css-section .right {
+  width: 55%;
+}
+
+.css .css-section .right .text2 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.css .css-section .right .text2 span {
+  color: #00D631;
+}
+
+.css .css-section .right p {
+  text-align: justify;
+}
+
+.typing-3 {
+  color: #00D631;
+}
+
+/*Media query Responsive*/
+@media (max-width: 1300px) {
+  .home .max-width {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 1104px) {
+  .about .about-section .left img {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 947px) {
+  .menuBtn {
+    z-index: 999;
+  }
+
+  .home .home-section .text-2 {
+    font-size: 70px;
+  }
+
+  .home .home-section .text-3 {
+    font-size: 35px;
+  }
+
+  .home .home-section a {
+    font-size: 23px;
+    padding: 10px 30px;
+  }
+
+  .max-width {
+    max-width: 930px;
+  }
+
+  .about .about-section .column {
+    width: 100%;
+  }
+
+  .about .about-section .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+
+  .about .about-section .right {
+    flex: 100%;
+  }
+
+  .css .css-section .column {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 690px) {
+  .max-width {
+    padding: 0 23px;
+  }
+
+  .home .home-section .text-2 {
+    font-size: 60px;
+  }
+
+  .home .home-section .text-3 {
+    font-size: 32px;
+  }
+
+  .home .home-section a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .home .home-section .text-2 {
+    font-size: 50px;
+  }
+
+  .home .home-section .text-3 {
+    font-size: 27px;
+  }
+
+  .about .about-section .right .text,
+  .css .css-section .left .text {
+    font-size: 19px;
+  }
